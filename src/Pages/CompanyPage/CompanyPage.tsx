@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
-import { CompanyKeyMetrics, CompanyProfile } from '../../company';
+import { CompanyProfile } from '../../company';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import CompanyDashboard from '../../Components/CompanyDashboard/CompanyDashboard';
 import Tile from '../../Components/Tile/Tile';
-import { getCompanyProfile, getKeyMetrics } from '../../api';
+import { getCompanyProfile } from '../../api';
 
 interface Props {}
 

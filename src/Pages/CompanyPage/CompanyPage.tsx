@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from "react-router-dom";
-import { CompanyProfile } from '../../company';
-import { getCompanyProfile } from '../../api';
+import { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
+import { CompanyKeyMetrics, CompanyProfile } from '../../company';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import CompanyDashboard from '../../Components/CompanyDashboard/CompanyDashboard';
 import Tile from '../../Components/Tile/Tile';
+import { getCompanyProfile, getKeyMetrics } from '../../api';
 
 interface Props {}
 
@@ -29,7 +29,9 @@ const CompanyPage = (props: Props) => {
 
       <Sidebar/>
 
-      <CompanyDashboard ticker={ticker!}><Tile title="Company Name" subtitle={company.companyName}/></CompanyDashboard>
+      <CompanyDashboard ticker={ticker!}>
+        <Tile title="Company Name" subtitle={company.companyName}/>
+      </CompanyDashboard>
     </div>
     ) : (
       <div>Company not found!</div>

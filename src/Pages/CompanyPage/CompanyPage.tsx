@@ -8,7 +8,7 @@ import { getCompanyProfile } from '../../api';
 import Spinner from '../../Components/Spinner/Spinner';
 import CompFinder from '../../Components/CompFinder/CompFinder';
 import TenKFinder from '../../Components/TenKFinder/TenKFinder';
-
+//
 interface Props {}
 
 const CompanyPage = (props: Props) => {
